@@ -1,6 +1,6 @@
 require 'boxr'
 class Api::V1::UploadsController < ApplicationController
-    CLIENT = Boxr::Client.new('JlC5mGfAKg7pL43Osw1qpvztHYfzD4q6')
+    CLIENT = Boxr::Client.new('BBCS3X1wrmT8NEhgps7gmrz18T266GLW')
     PARENT_FOLDER = 124248437317;
 
     def index

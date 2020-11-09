@@ -1,0 +1,2 @@
+class TokenCredential < ApplicationRecord
+end

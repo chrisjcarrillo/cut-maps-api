@@ -3,9 +3,11 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :uploads, only: [:index, :show] do
         collection do
+          get 'login'
           get 'get_folder'
           get 'upload_file'
           get 'create_folder'
+          get 'get_token'
           root 'uploads#index'
           # get 'reports'
           # get 'detailed_leads'

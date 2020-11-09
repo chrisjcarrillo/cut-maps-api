@@ -54,8 +54,13 @@ GEM
       jwt (>= 1.4)
     builder (3.2.4)
     byebug (11.1.3)
+    childprocess (3.0.0)
     concurrent-ruby (1.1.7)
     crass (1.0.6)
+    dotenv (2.7.6)
+    dotenv-rails (2.7.6)
+      dotenv (= 2.7.6)
+      railties (>= 3.2)
     erubi (1.9.0)
     ffi (1.13.1)
     globalid (0.4.2)
@@ -122,7 +127,12 @@ GEM
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    regexp_parser (1.8.2)
     ruby_dep (1.5.0)
+    rubyzip (2.3.0)
+    selenium-webdriver (3.142.7)
+      childprocess (>= 0.5, < 4.0)
+      rubyzip (>= 1.2.2)
     spring (2.1.1)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -138,6 +148,13 @@ GEM
     thread_safe (0.3.6)
     tzinfo (1.2.8)
       thread_safe (~> 0.1)
+    watir (6.16.5)
+      regexp_parser (~> 1.2)
+      selenium-webdriver (~> 3.6)
+    webdrivers (4.4.1)
+      nokogiri (~> 1.6)
+      rubyzip (>= 1.3.0)
+      selenium-webdriver (>= 3.0, < 4.0)
     websocket-driver (0.7.3)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -149,6 +166,7 @@ DEPENDENCIES
   bootsnap (>= 1.1.0)
   boxr
   byebug
+  dotenv-rails
   listen (>= 3.0.5, < 3.2)
   parallel (~> 1.0)
   pg (>= 0.18, < 2.0)
@@ -158,6 +176,8 @@ DEPENDENCIES
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data
+  watir
+  webdrivers
 
 RUBY VERSION
    ruby 2.4.1p111

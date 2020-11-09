@@ -3,6 +3,9 @@ class Api::V1::UploadsController < ApplicationController
     CLIENT = Boxr::Client.new('JlC5mGfAKg7pL43Osw1qpvztHYfzD4q6')
     PARENT_FOLDER = 124248437317;
 
+    def index
+    end
+
     def get_folder
         @items = CLIENT.folder_items(Boxr::ROOT)
         @items.each {|i| puts i.name}

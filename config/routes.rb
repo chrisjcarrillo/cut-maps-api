@@ -6,6 +6,7 @@ Rails.application.routes.draw do
           get 'get_folder'
           post 'upload_file'
           post 'create_folder'
+          root 'uploads#index'
           # get 'reports'
           # get 'detailed_leads'
           # get 'generate_accelerated_responsivness'

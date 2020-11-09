@@ -4,8 +4,8 @@ Rails.application.routes.draw do
       resources :uploads, only: [:index, :show] do
         collection do
           get 'get_folder'
-          post 'upload_file'
-          post 'create_folder'
+          get 'upload_file'
+          get 'create_folder'
           root 'uploads#index'
           # get 'reports'
           # get 'detailed_leads'

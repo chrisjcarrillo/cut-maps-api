@@ -9,15 +9,16 @@ class Api::V1::UploadsController < ApplicationController
 
     def login
         oauth_url = Boxr::oauth_url(URI.encode_www_form_component('1233'))
-        browser = Watir::Browser.new
-        browser.goto (oauth_url.host + oauth_url.path + '?' + oauth_url.query )
-        username = browser.input(:id => 'login').send_keys 'chrisjcarrillo@hotmail.com'
-        password = browser.input(:id => 'password').send_keys 'Ronaldo10!'
-        submit_button = browser.input(:title => 'Authorize').click
-        consent_button = browser.button(:title => 'Grant access to Box').when_present.click
-        return_url = browser.url
-        this = CGI::parse(return_url)
-        render json: this['code'].to_s
+        render json: oauth_url
+        # browser = Watir::Browser.new
+        # browser.goto (oauth_url.host + oauth_url.path + '?' + oauth_url.query )
+        # username = browser.input(:id => 'login').send_keys 'chrisjcarrillo@hotmail.com'
+        # password = browser.input(:id => 'password').send_keys 'Ronaldo10!'
+        # submit_button = browser.input(:title => 'Authorize').click
+        # consent_button = browser.button(:title => 'Grant access to Box').when_present.click
+        # return_url = browser.url
+        # this = CGI::parse(return_url)
+        # render json: this['code'].to_s
     end 
 
     def get_token
